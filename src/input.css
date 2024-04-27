@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+    font-size: 0.625rem;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+@media (max-width: 600px) {
+    html{
+        font-size: 50%;
+    }
+    
+}
+
+@layer components{
+    .snap-feature{
+        @apply snap-mandatory snap-y h-screen overflow-y-scroll transition-all duration-500 scroll-smooth
+    }
+
+    .car-section{
+        @apply w-full h-screen relative snap-always snap-start
+    }
+    .car-img{
+        @apply w-full h-full object-cover
+    }
+    .logo{
+        @apply mr-[9.5rem]
+    }
+    .nav-items{
+       @apply text-2xl font-semibold text-black px-5 py-3 bg-transparent hover:bg-slate-300 hover:bg-opacity-40 rounded-xl transition-all duration-1000
+    }
+    .hero-content{
+        @apply absolute top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center mt-7
+    }
+    .heading{
+        @apply capitalize text-6xl font-semibold text-slate-900
+    }
+    .content{
+        @apply capitalize text-2xl font-normal text-slate-700 py-5
+    }
+
+    .buttons{
+        @apply absolute bottom-[5%] md:bottom-[15%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col md:flex-row  items-center  md:gap-5 
+    }
+
+    .btn{
+        @apply  text-center bg-slate-800 rounded-full  px-8 py-5 inline-block uppercase  my-3  w-[25rem]
+    }
+
+    .custom{
+        @apply text-xl font-semibold text-slate-50 
+    }
+    .exist{
+        @apply text-xl font-semibold bg-slate-100 text-slate-800 
+    }
+
+    .arrow{
+        @apply absolute bottom-[7%] left-[50%] translate-x-[-50%] translate-y-[-50%] animate-bounce
+    }
+}
